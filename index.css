@@ -1,105 +1,140 @@
-/* *{
-    padding: 0;
+* {
+    font-family: "Inter", system-ui;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-nav{
-    background-color: pink;
-    text-align: center;
-    height: 80px;
-    justify-content: center;
-
-}
-nav .ex-link{
+#ex-link{
     width: 100%;
+    text-align: center;
     background-color: black;
-    padding: 6px;
-    float: left;
 }
-nav .ex-link a{
-    color: #fff;
+#ex-link a{
     text-decoration: none;
-}
-
-#menu{
-    float: left;
-    padding: 10px;
-}
-#menu a{
-    text-decoration: none;
-    color: black;
-    font-size: large;
-}
-#log{
-    display: inline-block;
-}
-#logo{
-    padding: 10px;
-    list-style-type: none;
-
-}
-
-#logo a{
-    text-decoration: none;
-    color: black;
-}
-
-.icon{
-    float: right;
-    display: inline-flex;
-    
-}
-.icon li{
-    align-items: center;
-    margin-top: 9px;
-    list-style-type: none;
-    padding: 10px;
-    justify-content: center;
-}
-.icon li a{
-    text-decoration: none;
-    color: #000;
-}
-nav ul{
-    text-align: center;
-    position: fixed; 
-    width: 100%;
-}
-.text{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    cursor: pointer;
-    background: pink;
-    height: 83vh;
-}
-.text h3{
-
-    padding-top: 100px;
-    padding-left: 15px;
-    text-align: left;
-    margin-left: 20%;
     color: white;
 }
-.text h1{
-    text-align: start;
-    margin-left: 20%;
-    font-weight: 900;
-    font-size: 80px;
-    letter-spacing: 10px;
+.row a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
 }
-span{
-    display: block;
-    margin-top: -140px;
-    font-size: 120px;
-    
+#icn{
+    text-align: end;   
 }
-#tf{
-    display: inline-block;
-    margin-top: -130px;
-    text-align: end;
-    margin-right: 40%;
-    font-size: 120px;
 
+#icn a{
+    padding-right:12px ;
+}
+
+/* Container for each image */
+.image-container {
+    /*width: 100vw;  Full width of the viewport */
+    /*height: 100vh;  Full height of the viewport */
+    /*overflow: hidden;  Ensure images stay within bounds */
+    /* position: relative;  To position content inside if necessary */
+}
+
+/* Image styling */
+.banner-image {
+    width: 100%; 
+    height: 100%;
+   /* object-fit: cover;  Ensures the image covers the entire container without stretching */
+    /* display: block; Removes any extra spacing under the image */
+    /* box-sizing: border-box; */
+}
+
+
+/* header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+} */
+/* img {
+    box-sizing: border-box;
+    width: 100%;
+    object-fit: cover;
+} */
+
+
+/* 
+
+ /* Universal Box-sizing */
+
+ /*
+* {
+    font-family: "Inter", system-ui;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#ex-link {
+    text-align: center;
+    background-color: black;
+}
+
+#ex-link a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.row a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+
+#icn {
+    text-align: end;
+}
+
+#icn a {
+    padding-right: 12px;
+}
+
+
+#menu-bar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.8); 
+    width: 100%;
+}
+
+/* Logo styling 
+#logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Image container settings 
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+/* First image should only be 90vh 
+.first-image {
+    height: 90vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Sticky menu bar and logo appear on the image 
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Image border should follow box-sizing 
+img {
+    box-sizing: border-box;
+    border: 5px solid #ddd;
 }
  */
