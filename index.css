@@ -26,115 +26,12 @@
     padding-right:12px ;
 }
 
-/* Container for each image */
-.image-container {
-    /*width: 100vw;  Full width of the viewport */
-    /*height: 100vh;  Full height of the viewport */
-    /*overflow: hidden;  Ensure images stay within bounds */
-    /* position: relative;  To position content inside if necessary */
-}
 
-/* Image styling */
 .banner-image {
     width: 100%; 
     height: 100%;
-   /* object-fit: cover;  Ensures the image covers the entire container without stretching */
-    /* display: block; Removes any extra spacing under the image */
-    /* box-sizing: border-box; */
+
 }
 
 
-/* header {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-} */
-/* img {
-    box-sizing: border-box;
-    width: 100%;
-    object-fit: cover;
-} */
 
-
-/* 
-
- /* Universal Box-sizing */
-
- /*
-* {
-    font-family: "Inter", system-ui;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-#ex-link {
-    text-align: center;
-    background-color: black;
-}
-
-#ex-link a {
-    text-decoration: none;
-    color: white;
-}
-
-
-.row a {
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-}
-
-
-#icn {
-    text-align: end;
-}
-
-#icn a {
-    padding-right: 12px;
-}
-
-
-#menu-bar {
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    background-color: rgba(255, 255, 255, 0.8); 
-    width: 100%;
-}
-
-/* Logo styling 
-#logo img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Image container settings 
-.image-container {
-    position: relative;
-    overflow: hidden;
-}
-
-/* First image should only be 90vh 
-.first-image {
-    height: 90vh;
-    width: 100%;
-    object-fit: cover;
-}
-
-/* Sticky menu bar and logo appear on the image 
-header {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-}
-
-/* Image border should follow box-sizing 
-img {
-    box-sizing: border-box;
-    border: 5px solid #ddd;
-}
- */
