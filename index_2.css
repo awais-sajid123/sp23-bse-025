@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* External link sticky on top */
+.ex-link {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 6px;
+}
+
+.ex-link a {
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+}
+
+/* Navbar background color change on medium and small screens */
+.navbar-sticky {
+    position: sticky;
+    top: 36px; /* Adjust to account for the ex-link height */
+    z-index: 999;
+}
+
+/* No background on large screens */
+@media (min-width: 992px) {
+    .navbar-sticky {
+        background-color: transparent;
+    }
+}
+
+/* White background on screens smaller than medium */
+@media (max-width: 991px) {
+    .navbar-sticky {
+        margin: 0;
+        width: 100%;
+        background-color: white;
+    }
+}
+
+
+
+.img-fluid-full {
+    width: 100%; /* Ensure image covers the full width of the container */
+    height: 100vh; /* Make the image fill the viewport height */
+    object-fit: cover; /* Ensure the image fits without stretching */
+}
+
+.shop-now-overlay {
+    top: 80%; /* Position at 80% from the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust centering */
+    border: 2px solid white; /* White border */
+    padding: 10px 20px; /* Padding inside the border */
+    width: fit-content; /* Fit the content inside the div */
+}
+
+.arrow-overlay {
+    top: 92%; /* Position arrow below the "Shop Now" div */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust centering */
+}
+
+.fa-angle-down {
+    font-size: 30px; /* Adjust arrow size */
+}
+
+@media (max-width: 768px) {
+    .shop-now-overlay h3 {
+        font-size: 1.5rem; /* Adjust text size for smaller screens */
+    }
+    .fa-angle-down {
+        font-size: 20px; /* Adjust arrow size for smaller screens */
+    }
+}
