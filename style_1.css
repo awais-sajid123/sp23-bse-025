@@ -4,16 +4,16 @@
     margin: 0;
 }
 
-body, html {
-    height: 100%;
-}
+
 
 /* Sticky Header */
 .head {
     position: sticky;
     top: 0;
     z-index: 1000;
-   /* background-color: white; /* Make sure header has a background color when sticky */
+   /* background-color: white; /* Ensure background color is set */
+    width: 100%;
+    
 }
 
 /* External link styling */
@@ -79,9 +79,11 @@ body, html {
     font-size: 1.2rem;
 }
 
+
+
 /* Image container */
 #first {
-    position: relative;
+    position: relative; 
    /* height: 100vh; /* Full viewport height */
     width: 100%;
 }
