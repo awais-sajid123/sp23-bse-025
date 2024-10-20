@@ -1,8 +1,8 @@
-/* Reset margin and padding */
+
 body, html {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Ensures padding and borders don't affect width */
+    box-sizing: border-box; 
 }
 
 /* Image covers the viewport */
@@ -39,40 +39,40 @@ body, html {
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .shop-now-overlay h3 {
-        font-size: 1.5rem; /* Reduce text size for mobile */
+        font-size: 1.5rem; 
     }
     .fa-angle-down {
-        font-size: 40px; /* Reduce arrow size for mobile */
+        font-size: 40px; 
     }
 
     /* Navbar adjustments */
     #nav .menu-text {
-        display: none; /* Hide "MENU" text on smaller screens */
+        display: none; 
     }
     
     #nav {
-        background-color: white; /* White background for navbar */
+        background-color: white; 
     }
     
     #nav .navbar-brand {
-        margin-left: 2px; /* Reduce left margin */
+        margin-left: 2px; 
     }
     
     #icn a {
-        margin-right: 2px; /* Reduce right margin for icons */
+        margin-right: 2px; 
     }
 }
 
-/* For the Bag image - change menu text color */
+
 .text-white-menu #nav .navbar-brand, .text-white-menu #nav .nav-link {
-    color: white !important; /* Menu text turns white for bag image */
+    color: white !important; 
 }
 
-/* Style for ex-link */
+
 .ex-link {
     position: sticky;
     top: 0;
-    z-index: 1000; /* Ensure ex-link is on top */
+    z-index: 1000; 
     background-color: black;
     color: white;
     text-align: center;
@@ -85,18 +85,18 @@ body, html {
     padding: 8px;
 }
 
-/* Navbar with transparent background */
+
 #nav {
     position: sticky;
-    top: 36px; /* Offset from the external link */
-    z-index: 900; /* Ensure it stays below the ex-link but above other content */
+    top: 36px; 
+    z-index: 900; 
     background-color: transparent;
     padding: 6px 0;
 }
 
 @media (max-width: 768px) {
     #nav {
-        background-color: white; /* White background on small screens */
+        background-color: white; 
         min-width: 100%;
         margin: 0;
         font-size: smaller;
@@ -117,17 +117,17 @@ body, html {
 }
 
 .custom-input {
-    height: 70px; /* Increase height */
-    width: 100%;  /* Make sure it takes full width of its column */
-    font-size: 1.1rem; /* Slightly larger text */
-    border: 2px solid #ccc; /* Larger border */
+    height: 70px; 
+    width: 100%;  
+    font-size: 1.1rem; 
+    border: 2px solid #ccc;
 }
 
 .subscribe-btn {
     cursor: pointer;
-    padding: 10px 20px; /* Adjust padding for better appearance */
-    background-color: black; /* Black background */
-    color: white; /* White text */
+    padding: 10px 20px; 
+    background-color: black; 
+    color: white; 
 }
 
 @media (max-width: 768px) {
@@ -141,7 +141,6 @@ body, html {
     }
 
     .subscribe-btn {
-        /* width: 100%; */
         text-align: center;
     }
 }
@@ -153,21 +152,19 @@ body, html {
     margin-bottom: 15px;
 }
 
-.pa, .footer-col p {
-    /* margin: 0 0 10px; */
-}
+
 
 .social-icons i {
     font-size: 20px;
     margin-right: 10px;
-    color: black; /* Ensure the icons are black */
+    color: black; 
 }
 
-/* Make sure all columns take 25% width on medium and larger screens */
+
 @media (min-width: 768px) {
     .footer-col {
-        width: 25%; /* Set equal width to 25% for medium and above */
-        text-align: start; /* Align text to the left */
+        width: 25%; 
+        text-align: start; 
     }
 
 }
@@ -175,18 +172,18 @@ body, html {
 /* Media Query for collapsible rows on small screens */
 @media (max-width: 767.98px) {
     .footer-col {
-        text-align: center; /* Center text on small screens */
+        text-align: center; 
     }
 
     .footer-col p {
-        display: none; /* Hide content by default */
+        display: none; 
     }
 
     .footer-col.active p {
-        display: block; /* Show content when active */
+        display: block; 
     }
 
     .footer-col {
-        cursor: pointer; /* Make columns clickable */
+        cursor: pointer; 
     }
 }
