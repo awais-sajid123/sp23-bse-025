@@ -1,0 +1,24 @@
+{
+  "employees": [
+    {
+      "id": "9c05",
+      "name": "Usman",
+      "description": "staff"
+    },
+    {
+      "id": "3ed8",
+      "name": "Awais",
+      "description": "Teacher"
+    },
+    {
+      "id": "feac",
+      "name": "Arslan",
+      "description": "staff"
+    },
+    {
+      "id": "6d0e",
+      "name": "Hamza",
+      "description": "Teacher"
+    }
+  ]
+}
