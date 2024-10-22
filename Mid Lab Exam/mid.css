@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allow flex items to wrap for smaller screens */
+    width: 90%;
+    margin: 0 auto;
+    gap: 5%;
+}
+
+.left-column, .right-column {
+    padding: 20px;
+}
+
+.left-column {
+    width: 35%; /* Adjusted size */
+    background-color: #f4f4f4;
+}
+
+.right-column {
+    width: 50%; /* Adjusted size */
+}
+
+/* Style for the profile image */
+img#profile-img {
+    width: 50%; /* Reduced image size by half */
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #8e44ad;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skills ul li {
+    background-color: #eee;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+
+#gap{
+    padding-top: 12px;
+}
+.right-column h1 {
+    font-size: 28px; /* Reduced font size */
+    color: #8e44ad;
+    margin-bottom: 10px;
+}
+
+.right-column h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.objective, .experience {
+    margin-bottom: 15px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+    }
+
+    .right-column h1 {
+        margin-top: 20px;
+    }
+
+    .contact {
+        margin-top: 20px; 
+    }
+}
