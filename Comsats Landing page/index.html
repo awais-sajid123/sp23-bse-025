@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Comsats Lahore</title>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="Images/new_logo.jpg" alt="logo"></a>
+            <div class="nav-links" id="navlinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul >
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">BLOG</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>Pakistan's Biggest University</h1>
+            <p>CUI Lahore offers 19 Undergraduate and 26 Graduate Programs (17 MS, 9 PhD) in a variety of fields of study.</p>
+            <a href="" class="hero-btn">Visit Us To Know More</a>
+        </div>    
+    </section>
+
+    <!--COURSE-->
+    <section class="course">
+        <h1>Courses We Offer</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+        <div class="row">
+            <div class="course-col">
+                <h3>Intermediate</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed aliquam distinctio a asperiores suscipit
+                    commodi voluptatum, 
+                </p>
+            </div>
+            <div class="course-col">
+                <h3>Degree</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed aliquam distinctio a asperiores suscipit
+                    commodi voluptatum, 
+                </p>
+            </div>
+            <div class="course-col">
+                <h3>Post-Graduate</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed aliquam distinctio a asperiores suscipit
+                    commodi voluptatum, 
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!--CAMPUS-->
+    <section class="campus">
+        <h1>Our Global Campus</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+
+        <div class="row">
+            <div class="campus-col">
+                <img src="Images/islamabad.jpeg">
+                <div class="layer">
+                    <h3>ISLAMABAD</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="Images/sahiwal.jpeg">
+                <div class="layer">
+                    <h3>SAHIWAL</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="Images/vehari.jpeg">
+                <div class="layer">
+                    <h3>VEHARI</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Facilities-->
+    <div class="faclities">
+        <h1>Our Faclities</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+
+        <div class="row">
+            <div class="facilities-col">
+                <img src="Images/library.jpeg">
+                <h3>World Class Library</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Commodi enim dolor aperiam quos dolore consequuntur doloribus cum, repudiandae</p>
+            </div>
+            <!-- <div class="facilities-col"></div>
+                <img src="Images/basketball.jpeg">
+                <h3>Largest Play Ground</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Commodi enim dolor aperiam quos dolore consequuntur doloribus cum, repudiandae</p>
+            </div> -->
+            <div class="facilities-col"></div>
+                <img src="Images/cafeteria.jpeg">
+                <h3>World Class Cafeteria</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Commodi enim dolor aperiam quos dolore consequuntur doloribus cum, repudiandae</p>
+            </div>
+        </div>
+    </div>
+    
+
+   
+
+    <!--java Script-->
+    <script>
+        var navlinks=document.getElementById("navlinks")
+        function showMenu(){
+            navlinks.style.right="0";
+        }
+        function hideMenu(){
+            navlinks.style.right="-200px";
+        }
+    </script>
+</body>
+</html>

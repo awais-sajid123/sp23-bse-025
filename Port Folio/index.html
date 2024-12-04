@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>awaissajid</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/awaislogo.jpg" class="logo" alt="">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i id="fas" class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i id="fas" class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div id="myi">
+                <img src="images/w1.jpg" alt="">
+            </div>
+            <div class="header-text">
+                <p>Software Engineer<span>&</span>Dev.</p>
+                <h1>Hi, I'm <span>Awais </span><br>Sajid From Pakistan</h1>
+            </div>
+        </div>
+    </div>
+
+    <!--about section-->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/IMG-20241104-WA0028.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p id="para1">
+                        My name is Awais Sajid and I am a 23-year-old Muslim from a hardworking middle-class family.I am deeply invested in learning technology, including Express.js, APIs, networking, and database design. Despite considering MySelf a slow learner, I am determined to improve and overcome procrastination.  
+                    </p>
+
+                    <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>  
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span> <br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span> <br>Web App Development</li>
+                            <li><span>App Development</span> <br>Building Android/ios apps</li>
+                        </ul>
+                    </div> 
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023 - Current</span> <br>UI/UX Design Training at CUI </li>
+                            <li><span>2022-2023</span> <br>Team Lead at Semester Project</li>
+                            <li><span>2024 - 2025</span> <br>Intership online at eCommaerce</li>
+                        </ul>
+                    </div> 
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023</span><br>UI/UX Design Training at CUI</li>
+                            <li><span>2024</span><br>BSE from CUI Lahore</li>
+                            <li><span>2025</span> <br>BSE  from cui lahore</li>
+                        </ul>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--services-->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi vitae ullam tempora. Accusamus minima ipsam unde quos expedita et ducimus iste cum iure excepturi deserunt natus fugit, hic sint minus.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UI/UX</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi vitae ullam tempora. Accusamus minima ipsam unde quos expedita et ducimus iste cum iure excepturi deserunt natus fugit, hic sint minus.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-apple"></i>
+                    <h2>App Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi vitae ullam tempora. Accusamus minima ipsam unde quos expedita et ducimus iste cum iure excepturi deserunt natus fugit, hic sint minus.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!--PortFolio-->
+    <div id="portfolio">
+        <div class="container">
+            <div class="sub-title">My Work</div>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/IMG-20241104-WA0031.jpg" alt="">
+
+                    <div class="layer">
+                        <h3>Social Media</h3>
+                        <p>The App connects you to the talented people around the world. Download it from Play Store</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/IMG-20241104-WA0030.jpg" alt="">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>The App connects you to the talented people around the world. Download it from Play Store</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/IMG-20241104-WA0032.jpg" alt="">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>The App connects you to the talented people around the world. Download it from Play Store</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!--Contact-->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>awaissajid421@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+923246731254</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+                    <a href="/WebProject/PortFolio/software engineer.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name='submit-to-google-sheet'>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button class="btn btn2" type="submit">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright <i class="fa-regular fa-copyright"></i> Awais. Made with help.</p>
+        </div>
+    </div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+    // Remove 'active-link' class from all tab links
+        for (var tablink of tablinks) {
+            tablink.classList.remove("active-link"); // Fixed: Use `classList` (case-sensitive)
+        }
+
+    // Hide all tab contents by removing 'active-tab'
+        for (var tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab"); // Fixed: Use `classList` (case-sensitive)
+        }
+
+    // Add 'active-link' class to the clicked tab link
+        event.currentTarget.classList.add("active-link"); // Fixed: Corrected the class name 'active-link'
+
+    // Show the selected tab content
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<script>
+    var sidemeu=document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right="0";
+    }
+
+    function closemenu(){
+        sidemeu.style.right="-200px";
+    }
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyZnPx6oEc_ligAKm2okiTcuzC-A3_6LP3am5LiQyzgfRc-s2_7XLJfeU6VPdOW1tg8ag/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById('msg');
+
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent successfully";
+            setTimeout(function(){
+                msg.innerHTML="";
+            },5000)
+            form.reset();
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
