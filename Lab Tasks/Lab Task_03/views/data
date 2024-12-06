@@ -1,0 +1,66 @@
+ <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <img src="000RFBP24V24_5.jpg" alt="South Collection Unstitched" class="img-fluid">
+                <div class="row">
+                    <div class="col-7 mt-3 p-0 ps-4">
+                        <h5 class="text-start">3 piece-embroidered linen suit</h5>
+                        <p class="text-start">
+                            Unstitched winter 24'<br>Rs:29,000
+                        </p>
+                    </div>
+                    <div class="col-5 mt-5 p-0 ">
+                        <button type="button" class="btn btn-danger">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Item 2 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <img src="00U2TDY24V62_9.jpg" alt="Ready to wear" class="img-fluid">
+                <div class="row">
+                    <div class="col-7 mt-3 p-0 ps-4">
+                        <h5 class="text-start">3 piece-embroidered linen suit</h5>
+                        <p class="text-start">
+                            Unstitched winter 24'<br>Rs:29,000
+                        </p>
+                    </div>
+                    <div class="col-5 mt-5 p-0 ">
+                        <button type="button" class="btn btn-danger">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Item 3 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <img src="0U3PDY24V610_2.jpg" alt="Man" class="img-fluid">
+                <div class="row">
+                    <div class="col-7 mt-3 p-0 ps-4">
+                        <h5 class="text-start">3 piece-embroidered linen suit</h5>
+                        <p class="text-start">
+                            Unstitched winter 24'<br>Rs:29,000
+                        </p>
+                    </div>
+                    <div class="col-5 mt-5 p-0 ">
+                        <button type="button" class="btn btn-danger">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Item 4 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <img src="0U3PDY24V620_5.jpg" alt="West" class="img-fluid">
+                <div class="row">
+                    <div class="col-7 mt-3 p-0 ps-4">
+                        <h5 class="text-start">3 piece-embroidered linen suit</h5>
+                        <p class="text-start">
+                            Unstitched winter 24'<br>Rs:29,000
+                        </p>
+                    </div>
+                    <div class="col-5 mt-5 p-0 ">
+                        <button type="button" class="btn btn-danger">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <h1>Contact Us</h1>
+
+Address : <%= address %> <br>
+Phone <%= phone %>

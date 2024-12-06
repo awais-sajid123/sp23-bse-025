@@ -1,0 +1,32 @@
+<h3>Products</h3>
+<a href="/admin/products/create" class="btn btn-info">Create New Product</a>
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>_id</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Is Featured</th>
+            <th>Category</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for( let index = 0; index < products.length; index++ ) { %>
+            <tr>
+                <td><%= products[index]._id %></td>
+                <td><%= products[index].title %></td>
+                <td><%= products[index].description %></td>
+                <td><%= products[index].price %></td>
+                <td><%= products[index].isFeatured %></td>
+                <td><%= products[index].category ? products[index].category.title : 'No Category' %></td>
+
+                <td>
+                    <a href="/admin/products/edit/<%= products[index]._id %>" class="btn btn-warning">Edit</a>
+                    <a href="/admin/products/delete/<%= products[index]._id %>" class="btn btn-danger">Del</a>
+                </td>
+            </tr>
+        <% } %>
+    </tbody>
+</table>
