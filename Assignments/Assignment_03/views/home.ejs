@@ -1,9 +1,60 @@
 
+<!-- this is for side menu -->
+  
+<!-- Side Menu -->
+<div id="side-menu-panel" class="side-menu position-fixed bg-light vh-100 start-0 top-0 ">
+    <button class="btn-close float-end me-3 mt-3" id="close-menu"></button>
+    <ul class="list-unstyled px-4 mt-5">
+        <li class="mb-2"><a href="#" class="nav-link">Winter Unstitched</a></li>
+        <li class="mb-2"><a href="#" class="nav-link">Wedding Pret</a></li>
+        <li class="mb-2"><a href="#" class="nav-link">Unstitched Premium satin</a></li>
+        <li class="mb-2"><a href="#" class="nav-link">New Arrivals</a></li>
+        <li class="mb-2"><a href="#" class="nav-link">Unstitched</a></li>
+        <li class="mb-2"><a href="#" class="nav-link">Ready to wear</a></li>
+        <li class="mb-2"><a href="#" class="nav-link">Home</a></li>
+        <li class="mb-2"><a href="#" class="nav-link">Footwear</a></li>
+        <!-- Add more menu items -->
+    </ul>
+</div>
+
+<!-- Search Bar -->
+<div id="search-bar" class="search-bar position-fixed bg-light d-none">
+    <div class="d-flex justify-content-between align-items-center p-3">
+        <input type="text" class="form-control me-1" placeholder="Search...">
+        <button class="btn-close" id="close-search"></button>
+    </div>
+</div>
+
+<!-- Login Page -->
+<div id="login-page" class="centered-page bg-white p-5 shadow rounded d-none">
+    <button class="btn-close float-end" id="close-login"></button>
+    <h2 class="text-center mb-4">Login</h2>
+    <form>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter your password">
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Login</button>
+    </form>
+</div>
+
+<!-- Cart Page -->
+<div id="cart-page" class="centered-page bg-white p-5 shadow rounded d-none">
+    <button class="btn-close float-end" id="close-cart"></button>
+    <h2 class="text-center mb-4">Your Cart</h2>
+    <p>No items in your cart yet.</p>
+</div>
+
+<!--Content-->
 <div class="container-fluid p-0">
     
     <div class="position-relative">
-        <img src="Images/d1.jpg" alt="Image 1 Desktop" class="img-fluid img-fluid-full d-none d-md-block">
-        <img src="Images/m1.jpg" alt="Image 1 Mobile" class="img-fluid img-fluid-full d-md-none">
+        <img src="Images/d4.jpg" alt="Image 1 Desktop" class="img-fluid img-fluid-full d-none d-md-block">
+        <img src="Images/m4.jpg" alt="Image 1 Mobile" class="img-fluid img-fluid-full d-md-none">
         <div class="position-absolute shop-now-overlay text-white text-center border-white">
             <h3>SHOP NOW</h3>
         </div>
@@ -36,8 +87,8 @@
         </div>
     </div>
     <div class="position-relative">
-        <img src="Images/d4.jpg" alt="Image 3 Desktop" class="img-fluid img-fluid-full d-none d-md-block">
-        <img src="Images/m4.jpg" alt="Image 3 Mobile" class="img-fluid img-fluid-full d-md-none">
+        <img src="Images/d1.jpg" alt="Image 3 Desktop" class="img-fluid img-fluid-full d-none d-md-block">
+        <img src="Images/m1.jpg" alt="Image 3 Mobile" class="img-fluid img-fluid-full d-md-none">
         <div class="position-absolute shop-now-overlay text-white text-center border-white">
             <h3>SHOP NOW</h3>
         </div>
@@ -98,3 +149,23 @@
         </div>
     </div>
 </div>
+
+<div class="video-section">
+    <!-- Video -->
+    <video autoplay muted loop>
+        <source src="Images/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Scrolling Images -->
+    <div class="scrolling-images">
+        <img src="Images/m1.jpg" alt="Image 1">
+        <img src="Images/m2.jpg" alt="Image 2">
+        <img src="Images/m3.jpg" alt="Image 3">
+        <img src="Images/m4.jpg" alt="Image 4">
+        <!-- Duplicate images for seamless scrolling -->
+        <img src="Images/m1.jpg" alt="Image 1">
+        <img src="Images/m2.jpg" alt="Image 2">
+    </div>
+</div>
+
