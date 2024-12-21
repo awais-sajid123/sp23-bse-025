@@ -1,0 +1,105 @@
+<!-- Orders Management -->
+<h2>Orders Management</h2>
+
+<!-- Total Revenue Display -->
+<h4 id="total-revenue">Total Revenue: $<%= totalRevenue.toFixed(2) %></h4>
+
+<table class="table table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Payment Method</th>
+            <th>Cart</th>
+            <th>Cart Total</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% orders.forEach(order => { %>
+            <tr data-order-id="<%= order._id %>">
+                <!-- Order Details -->
+                <td><%= order.name %></td>
+                <td><%= order.email %></td>
+                <td><%= order.address %></td>
+                <td><%= order.paymentMethod %></td>
+                <td>
+                    <!-- Render Cart Items as Table -->
+                    <table class="table table-bordered table-sm">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% order.cart.forEach(item => { %>
+                                <tr>
+                                    <td><strong><%= item.title %></strong></td>
+                                    <td><%= item.quantity %></td>
+                                    <td>$<span class="item-price"><%= item.price.toFixed(2) %></span></td>
+                                    <td>
+                                        $<span class="item-subtotal" 
+                                                data-price="<%= item.price %>" 
+                                                data-quantity="<%= item.quantity %>">
+                                            <%= (item.price * item.quantity).toFixed(2) %>
+                                        </span>
+                                    </td>
+                                </tr>
+                            <% }); %>
+                        </tbody>
+                    </table>
+                </td>
+
+                <!-- Cart Total -->
+                <td>
+                    $<span class="cart-total" data-order-id="<%= order._id %>">0.00</span>
+                </td>
+                <!-- Order Status -->
+                <td class="order-status"><%= order.status %></td>
+                <!-- Action Buttons -->
+                <td>
+                    <% if (order.status === 'Processing') { %>
+                        <form action="/admin/orders/confirm/<%= order._id %>" method="POST" style="display:inline;">
+                            <button type="submit" class="btn btn-success btn-sm">Confirm</button>
+                        </form>
+                        
+                        <form action="/admin/orders/cancel/<%= order._id %>" method="POST" style="display:inline;">
+                            <button class="btn btn-danger btn-sm">Cancel</button>
+                        </form>
+                    <% } else { %>
+                        <form action="/admin/orders/cancel/<%= order._id %>" method="POST" style="display:inline;">
+                            <button class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    <% } %>
+                </td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
+
+<!-- JavaScript to Update Cart Total -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Update each cart total when the page loads
+        document.querySelectorAll('.cart-total').forEach(function(cartTotalElement) {
+            const orderId = cartTotalElement.getAttribute('data-order-id');
+            let cartTotal = 0;
+
+            // Find the cart items for this order
+            const cartItems = document.querySelectorAll(`[data-order-id="${orderId}"] .item-subtotal`);
+            cartItems.forEach(function(item) {
+                const price = parseFloat(item.getAttribute('data-price'));
+                const quantity = parseInt(item.getAttribute('data-quantity'));
+                cartTotal += price * quantity;
+            });
+
+            // Update the total for this order
+            cartTotalElement.textContent = cartTotal.toFixed(2);
+        });
+    });
+</script>

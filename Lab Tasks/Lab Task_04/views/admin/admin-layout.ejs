@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+
+        .admin-toolbar {
+            position: sticky;
+            top: 0;
+            z-index: 1030;
+            background: #343a40;
+            padding: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .admin-toolbar .btn {
+            margin: 0 10px;
+            color: white;
+            border: 1px solid white;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .admin-toolbar .btn:hover {
+            background: white;
+            color: #343a40;
+        }
+
+        .admin-toolbar .btn a {
+            color: inherit; /* Ensure links inherit the button's text color */
+            text-decoration: none; /* Remove underline from links */
+            display: block; /* Make links fill the entire button */
+            width: 100%; /* Ensure the link takes up the whole button */
+            height: 100%; /* Ensure the link fills the button's height */
+        }
+
+        .dropdown-menu {
+            background-color: #343a40;
+            border: none;
+        }
+
+        .dropdown-item {
+            color: white;
+        }
+
+        .dropdown-item:hover {
+            background-color: #495057;
+        }
+
+        .card {
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+        }
+
+        .card i {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .admin-toolbar {
+                text-align: center;
+            }
+
+            .admin-toolbar .btn {
+                margin: 5px 5px;
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">ADMIN PANEL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">crossstitch</a>
+                    </li>
+                </ul>
+            </div>
+            <form action="/admin/products/search" method="GET" class="d-flex">
+                <input class="form-control me-2" name="q" type="search" placeholder="Search by Title">
+                <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Admin Toolbar -->
+    <div class="admin-toolbar d-flex justify-content-center flex-wrap">
+        <button class="btn btn-primary">
+            <a href="/admin/products/1"> <i class="fas fa-boxes"></i> View Products</a>
+        </button>
+        <button class="btn btn-success">
+            <a href="/admin/categories"><i class="fas fa-tags"></i> View Categories</a>
+        </button>
+        <button class="btn btn-danger">
+            <a href="/admin/adminOrders"><i class="fas fa-shopping-cart"></i> View Orders</a>
+        </button>
+        <div class="dropdown">
+            <button class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown">
+                <i class="fas fa-tools"></i> Admin Tools
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Employees History</a></li>
+                <li><a class="dropdown-item" href="#">Personal Data</a></li>
+            </ul>
+        </div>
+        <button class="btn btn-info">
+            <i class="fas fa-chart-line"></i> Analytics
+        </button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content bg-light py-4">
+        <div class="container">
+            <h2 class="text-center mb-4">Stitch Dashboard</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card shadow-sm border-0 bg-primary text-white">
+                        <div class="card-body text-center">
+                            <i class="fas fa-boxes fa-3x mb-3"></i>
+                            <h5 class="card-title">Total Products</h5>
+                            <p class="card-text">1000+ Products available.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm border-0 bg-success text-white">
+                        <div class="card-body text-center">
+                            <i class="fas fa-dollar-sign fa-3x mb-3"></i>
+                            <h5 class="card-title">Total Revenue</h5>
+                            <p class="card-text">$50,000 generated.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm border-0 bg-danger text-white">
+                        <div class="card-body text-center">
+                            <i class="fas fa-shopping-cart fa-3x mb-3"></i>
+                            <h5 class="card-title">Total Sales</h5>
+                            <p class="card-text">500+ successful sales.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- body %>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        /* Additional Custom Styles */
+        .cart-container {
+            margin: 30px auto;
+            max-width: 960px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        img {
+            width: 50px;
+            height: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .btn-sm {
+            font-size: 0.8rem;
+        }
+
+        tfoot td {
+            font-weight: bold;
+        }
+
+        .checkout-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cart-container">
+        <h1>Shopping Cart</h1>
+
+        <% if (products && products.length > 0) { %>
+            <table class="table table-striped table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Product</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Picture</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% let totalPrice = 0; %> <!-- Initialize total price -->
+                    <% products.forEach((product, index) => { %>
+                        <% let itemTotal = product.price * product.quantity; %>
+                        <% totalPrice += itemTotal; %>
+                        <tr>
+                            <td><%= product.title %></td>
+                            <td><%= product.description %></td>
+                            <td>$<%= product.price.toFixed(2) %></td>
+                            <td>
+                                <!-- Quantity Update Form -->
+                                <form action="/update-cart-quantity" method="POST" class="d-flex align-items-center">
+                                    <input type="hidden" name="productId" value="<%= product._id %>">
+                                    <input 
+                                        type="number" 
+                                        name="quantity" 
+                                        value="<%= product.quantity %>" 
+                                        min="1" 
+                                        class="form-control form-control-sm me-2"
+                                        style="width: 60px;"
+                                        onchange="this.form.submit()">
+                                </form>
+                            </td>
+                            <td>
+                                <% if (product.picture) { %>
+                                    <img src="<%= product.picture %>" alt="<%= product.title %>">
+                                <% } else { %>
+                                    <span>No Image</span>
+                                <% } %>
+                            </td>
+                            <td>
+                                <!-- Remove Button -->
+                                <a href="/remove-from-cart/<%= product._id %>" class="btn btn-danger">
+                                    Remove from Cart
+                                </a>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+                <tfoot class="table-light">
+                    <tr>
+                        <td colspan="3" class="text-end"><strong>Total</strong></td>
+                        <td colspan="3">$<%= totalPrice.toFixed(2) %></td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <!-- Action Buttons -->
+            <div class="checkout-container">
+                <a href="/" class="btn btn-primary">Add More Products</a>
+                <a href="/checkout" class="btn btn-success">Proceed to Checkout</a>
+            </div>
+        <% } else { %>
+            <p class="text-center">Your cart is empty.</p>
+            <div class="text-center">
+                <a href="/" class="btn btn-primary">Add Products</a>
+            </div>
+        <% } %>
+    </div>
+
+    <!-- Bootstrap Script -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<h4 class="text-center my-4">Edit Product</h4>
+
+<form action="" class="container p-4 shadow rounded bg-light" method="post" enctype="multipart/form-data">
+    <!-- Category Dropdown -->
+    <div class="mb-3">
+        <label for="category" class="form-label">Category</label>
+        <select name="category" id="category" class="form-control">
+            <% categories.forEach(category => { %>
+                <option value="<%= category._id %>" <%= category._id == product.category ? 'selected' : '' %>>
+                    <%= category.title %>
+                </option>
+            <% }); %>
+        </select>
+    </div>
+
+    <!-- Description Field -->
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea 
+            name="description" 
+            id="description" 
+            class="form-control" 
+            rows="4" 
+            placeholder="Enter a detailed product description here..."><%= product.description %></textarea>
+    </div>
+
+    <!-- Price Field -->
+    <div class="mb-3">
+        <label for="price" class="form-label">Price (in $)</label>
+        <input 
+            name="price" 
+            type="number" 
+            id="price" 
+            class="form-control" 
+            placeholder="Enter the product price" 
+            value="<%= product.price %>" 
+            min="1" 
+            step="0.01" />
+    </div>
+
+    <!-- Product Image Field -->
+    <div class="mb-3">
+        <label for="file" class="form-label">Product Image</label>
+        <input 
+            type="file" 
+            class="form-control" 
+            id="file" 
+            name="file" 
+            onchange="previewImage(event)" />
+        <% if (product.picture) { %>
+            <img src="/<%= product.picture %>" id="current-image" class="img-thumbnail mt-3" alt="Current Product Image" width="200px">
+        <% } %>
+        <img id="preview-image" class="img-thumbnail mt-3" style="display: none;" alt="New Product Preview" width="200px">
+    </div>
+
+    <!-- Featured Checkbox -->
+    <div class="form-check form-switch mb-3">
+        <input 
+            name="isFeatured" 
+            type="checkbox" 
+            class="form-check-input" 
+            id="isFeatured" 
+            <% if (product.isFeatured) { %> checked="checked" <% } %> />
+        <label for="isFeatured" class="form-check-label">Featured Product</label>
+    </div>
+
+    <!-- Gender Dropdown -->
+    <div class="mb-3">
+        <label for="gender" class="form-label">Gender</label>
+        <select name="gender" id="gender" class="form-control">
+            <option value="men" <% if (product.gender === 'men') { %> selected <% } %>>Men</option>
+            <option value="women" <% if (product.gender === 'women') { %> selected <% } %>>Women</option>
+            <option value="children" <% if (product.gender === 'children') { %> selected <% } %>>Children</option>
+        </select>
+    </div>
+
+    <!-- Size Dropdown -->
+    <div class="mb-3">
+        <label for="size" class="form-label">Size</label>
+        <select name="size" id="size" class="form-control">
+            <option value="small" <% if (product.size === 'small') { %> selected <% } %>>Small</option>
+            <option value="medium" <% if (product.size === 'medium') { %> selected <% } %>>Medium</option>
+            <option value="large" <% if (product.size === 'large') { %> selected <% } %>>Large</option>
+            <option value="xl" <% if (product.size === 'xl') { %> selected <% } %>>XL</option>
+            <option value="xxl" <% if (product.size === 'xxl') { %> selected <% } %>>XXL</option>
+            <option value="xxxl" <% if (product.size === 'xxxl') { %> selected <% } %>>XXXL</option>
+        </select>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="text-center">
+        <button class="btn btn-info px-4 py-2">Save Changes</button>
+    </div>
+</form>
+
+<script>
+    // Preview image on file select
+    function previewImage(event) {
+        const input = event.target;
+        const preview = document.getElementById('preview-image');
+        const currentImage = document.getElementById('current-image');
+
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                preview.src = e.target.result;
+                preview.style.display = 'block';
+            };
+            reader.readAsDataURL(input.files[0]);
+            if (currentImage) {
+                currentImage.style.display = 'none';
+            }
+        }
+    }
+</script>
