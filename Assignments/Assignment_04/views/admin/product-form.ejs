@@ -1,0 +1,57 @@
+<h3>Creating a New Product</h3>
+
+<form action="" class="container" method="post" enctype="multipart/form-data">
+    <div>
+        <label>Category</label>
+        <select name="category" class="form-control">
+          <% categories.forEach(category => { %>
+            <option value="<%= category._id %>"><%= category.title %></option>
+          <% }); %>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="">Description</label>
+        <textarea name="description" type="text" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="">Price</label>
+        <input name="price" type="text" class="form-control" value="5000"/>
+    </div>
+    
+    <div class="form-group">
+        <label for="">Picture</label>
+        <input name="file" type="file" class="form-control" value="5000" />
+    </div>
+    
+    <div class="form-group my-3">
+        <label for="">Featured?</label>
+        <input name="isFeatured" type="checkbox" class="form-check-input" />
+    </div>
+    
+    
+   
+
+    <!-- Gender Dropdown -->
+    <div class="form-group">
+        <label for="">Gender</label>
+        <select name="gender" class="form-control">
+            <option value="men">Men</option>
+            <option value="women">Women</option>
+            <option value="children">Kids</option>
+        </select>
+    </div>
+
+    <!-- Size Dropdown -->
+    <div class="form-group">
+        <label for="">Size</label>
+        <select name="size" class="form-control">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-info">Create Record</button>
+    </div>
+</form>
