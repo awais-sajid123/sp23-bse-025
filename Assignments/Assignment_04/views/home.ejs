@@ -10,13 +10,6 @@
 </head>
 <body>
 
-
-
-  
-
-
-
-
 <!--Content-->
 <div class="container-fluid p-0">
     
@@ -128,37 +121,39 @@ Buy Now
   <div id="pagination-controls" class="d-inline-flex"></div>
 </div>
 
+
 <!-- Product Cards -->
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 m-2" id="product-container">
-  <% products.forEach(product => { %>
-    <div class="col product-card" style="display: none;">
-      <div class="card h-100 shadow-sm border-0" style="transition: transform 0.2s; overflow: hidden;">
-        <!-- Product Image -->
-        <img class="card-img-top" src="/<%= product.picture %>" alt="Product Image" 
-             style="height: 250px; object-fit: cover; border-radius: 5px;">
-        <!-- Card Body -->
-        <div class="card-body text-center p-3">
-          <h5 class="card-title text-uppercase text-primary mb-1" style="font-size: 1rem;">
-            <%= product.category ? product.category.title : 'No Category' %>
-          </h5>
-          <h6 class="card-title text-dark mb-2" style="font-size: 0.9rem;"><%= product.title %></h6>
-          <p class="card-text text-muted mb-2" style="font-size: 0.8rem;"><%= product.description %></p>
-          <p class="card-text text-secondary mb-1" style="font-size: 0.8rem;">Category: <%= product.gender %></p>
-          <p class="card-text text-secondary mb-2" style="font-size: 0.8rem;">Size: <%= product.size %></p>
-          <!-- Add to Cart Button -->
-          <a href="/add-to-cart/<%= product._id %>" 
-             class="btn btn-outline-primary btn-sm rounded-pill fw-bold px-3 py-2 shadow-sm">
-            PKR: <%= product.price %> Add To Cart
-          </a>
-        </div>
-
-        <a href="">
+    <% products.forEach(product => { %>
+      <div class="col product-card" style="display: none;">
+        <div class="card h-100 shadow-sm border-0" style="transition: transform 0.2s; overflow: hidden;">
+          <!-- Product Image -->
+          <img class="card-img-top" src="/<%= product.picture %>" alt="Product Image" 
+               style="height: 75%; object-fit: cover; border-radius: 5px;">
+          <!-- Card Body -->
+          <div class="card-body text-center p-3">
+            <h5 class="card-title text-uppercase text-primary">
+              <%= product.category ? product.category.title : 'No Category' %>
+            </h5>
+            <h6 class="card-title text-dark mb-2" style="font-size: 0.9rem;"><%= product.title %></h6>
+            <p class="card-text text-muted mb-2" style="font-size: 0.8rem;"><%= product.description %></p>
+            <p class="card-text text-secondary mb-1" style="font-size: 0.8rem;">Category: <%= product.gender %></p>
+            <p class="card-text text-secondary mb-2" style="font-size: 0.8rem;">Size: <%= product.size %></p>
             
-        </a>
+            <!-- Price Display -->
+            <p class="fw-bold text-black mb-2" style="font-size: 1rem;">PKR: <%= product.price %></p>
+  
+            <!-- Add to Cart Button -->
+            <a href="/add-to-cart/<%= product._id %>" 
+               class="btn btn-outline-primary btn-sm rounded-pill fw-bold px-3 py-2 shadow-sm">
+              Add To Cart
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-  <% }) %>
-</div>
+    <% }) %>
+  </div>
+  
 
 
   
@@ -219,6 +214,7 @@ Buy Now
             <h1 class="m-0 fs-1">SUBSCRIBE</h1>
         </div>
     </div>
+    <!--main footer-->
     <div id="main-footer" class="container mt-5">
         <div class="row">
             
@@ -280,10 +276,9 @@ Buy Now
     });
 });
 </script>
-
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-  const productsPerPage = 4; // Number of products to show per page
+  const productsPerPage = 3; // Number of products to show per page
   const productCards = document.querySelectorAll('.product-card');
   const totalPages = Math.ceil(productCards.length / productsPerPage);
   const paginationControls = document.getElementById('pagination-controls');

@@ -1,8 +1,9 @@
-<!-- Orders Management -->
-<h2>Orders Management</h2>
+<!-- Sorting of orders on various options available -->
+<h2>SortOrder</h2>
 
 <!-- Total Revenue Display -->
-<h4 id="total-revenue">Total Revenue: $<%= totalRevenue.toFixed(2) %></h4>
+<h4 id="total-revenue" style="display: none;">Total Revenue: $<%= totalRevenue.toFixed(2) %> </h4>
+<input type="hidden" id="hidden-total-revenue" value="<%= totalRevenue.toFixed(2) %>">
 
 <table class="table table-bordered mt-3">
     <thead>
@@ -101,5 +102,9 @@
             // Update the total for this order
             cartTotalElement.textContent = cartTotal.toFixed(2);
         });
+
+        // Update the total revenue in the layout
+        const totalRevenue = document.getElementById('hidden-total-revenue').value;
+        parent.document.getElementById('layout-total-revenue').textContent = totalRevenue;
     });
 </script>

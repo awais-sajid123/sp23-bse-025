@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .form-container {
+      width: 100%;
+      max-width: 400px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+    a.text-primary {
+      text-decoration: none;
+    }
+    a.text-primary:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="d-flex flex-column align-items-center w-100">
+    <!-- Login Form -->
+    <div class="form-container">
+      <h2 class="text-center mb-4">Login</h2>
+      <form id="loginForm" method="POST" action="/admin/login">
+        <!-- Email -->
+        <div class="mb-3">
+          <label for="loginEmail" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="loginEmail" name="email" placeholder="Enter your email" required>
+        </div>
+        <!-- Password -->
+        <div class="mb-3">
+          <label for="loginPassword" class="form-label">Password</label>
+          <input type="password" class="form-control" id="loginPassword" name="password" placeholder="Enter your password" required>
+        </div>
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary w-100">Login</button>
+        <p class="text-center mt-3">Don't have an account? <a href="/admin" class="text-primary">Sign Up</a></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

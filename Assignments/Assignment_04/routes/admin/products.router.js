@@ -14,10 +14,10 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 
-
 router.get("/admin/dashboard", (req, res) => {
-  res.render("admin/dashboard", { layout: "admin/admin-layout" });
+  res.render("admin/login-signup", {layout: false});
 });
+
 router.get("/admin/products/delete/:id", async (req, res) => {
   await Product.findByIdAndDelete(req.params.id);
   return res.redirect("back");
