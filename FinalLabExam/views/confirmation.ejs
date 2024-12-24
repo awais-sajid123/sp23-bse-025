@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #FFDEE9, #B5FFFC);
+            color: #333;
+            text-align: center;
+        }
+
+        /* Top Menu */
+        .top-menu {
+            background: #007BFF;
+            padding: 15px;
+            color: white;
+            font-size: 1.2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .top-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+        }
+
+        .top-menu a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content */
+        h1 {
+            font-size: 2.5rem;
+            margin: 50px 0 20px;
+            color: #444;
+        }
+
+        .thank-you {
+            font-size: 5rem;
+            margin: 20px 0;
+        }
+
+        /* Button */
+        a {
+            display: inline-block;
+            padding: 12px 30px;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        a:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        /* Decorative Background Image */
+        .thank-you-image {
+            width: 200px;
+            height: auto;
+            margin: 30px auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .thank-you {
+                font-size: 4rem;
+            }
+
+            a {
+                font-size: 1rem;
+                padding: 10px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Menu -->
+    <div class="top-menu">
+        <a href="/">Home</a>
+        <a href="/shop">Shop</a>
+        <a href="/contact">Contact</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1><%= message %></h1>
+        <div class="thank-you">🎉🙏</div>
+        <img src="https://via.placeholder.com/200?text=Thank+You" alt="Thank You" class="thank-you-image">
+        <a href="/">Go Back to Home</a>
+    </div>
+</body>
+</html>

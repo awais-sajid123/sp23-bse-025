@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wishlist</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: white;
+    }
+    .wishlist-container {
+      width: 60%;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .add-product-btn, .back-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .back-btn {
+      background-color: #007BFF;
+    }
+  </style>
+</head>
+<body>
+  <div class="wishlist-container">
+    <h1 style="display: none;">Your Wishlist</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Price</th>
+          <th>Image</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% wishlist.forEach(product => { %>
+          <tr>
+            <td><%= product.name %></td>
+            <td><%= product.price %></td>
+            <td><img src="<%= product.image %>" alt="<%= product.name %>" width="100"></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <a href="/" class="add-product-btn">Add More Products</a>
+    <a href="/" class="back-btn">Go Back</a>
+  </div>
+</body>
+</html>

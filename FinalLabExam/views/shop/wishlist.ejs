@@ -1,0 +1,22 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/product.css">
+<%- include('../includes/navigation.ejs') %>
+
+<main>
+    <h1>Your Wishlist</h1>
+    <% if (prods.length > 0) { %>
+        <ul>
+            <% prods.forEach(prod => { %>
+                <li>
+                    <h2><%= prod.name %></h2>
+                    <img src="<%= prod.image %>" alt="<%= prod.name %>">
+                    <p>Price: $<%= prod.price %></p>
+                </li>
+            <% }); %>
+        </ul>
+    <% } else { %>
+        <p>No items in your wishlist.</p>
+    <% } %>
+</main>
+
+<%- include('../includes/footer.ejs') %>
